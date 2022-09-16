@@ -1,0 +1,181 @@
+.page{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+
+.page::after{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height:   175%;
+  top:20%;
+  left: 50%;
+  background: #d0cece;
+}
+
+h5{
+  position: relative;
+}
+
+/* horizontal line */
+.title-left::after{
+  content: "";
+  width: 30px;
+  position: absolute;
+  top:50%;
+  height: 1px;
+  background: #d0cece;
+  border-radius: 50%;
+  
+}
+
+.title-right::before{
+  content: "";
+  width: 30px;
+  position: absolute;
+  top:50%;
+  height: 1px;
+  background: #d0cece;
+  border-radius: 50%;
+
+}
+
+.title-right::before{
+  right: 100%;
+}
+
+.header{
+  background: #788f58;
+  color: white;
+  text-align: center;
+  letter-spacing: 3px;
+  padding: 1%;
+}
+.left{
+  position: static;
+  width: 47%;
+  text-align: right;
+  float: left;
+}
+
+.right{
+  position: relative;
+  width: 47%;
+  text-align: left;
+  float: right;
+
+}
+.title-left, .title-right{
+  letter-spacing: 3px;
+  font-size: large;
+}
+
+/* node - left */
+#title-left-1::before{
+  content: '';
+  position: absolute;
+  right: -8%;
+  top: 22%;
+  width: 8px;
+  height: 8px;
+  background:  #788f58;
+  border: 2px solid  #788f58;
+  border-radius: 50%;
+  z-index: 99;
+}
+
+/* node - right */
+#title-right-1::after{
+  content: '';
+  position: absolute;
+  right: 105%;
+  top: 22%;
+  width: 8px;
+  height: 8px;
+  background: #788f58;
+  border: 2px solid #788f58;
+  border-radius: 50%;
+  z-index: 99;
+}
+progress{
+  accent-color: #788f58;
+  width: 70%;
+}
+ul{
+  padding: 3%;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+.container {
+  width: 100%;
+}
+
+@media only screen and (max-width:999px) {
+.page::after{
+  display: none;
+}
+
+.page{
+  width: 100%;
+  float: none;
+  height: auto;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* left - line - none */
+.title-left::after{
+  display: none;
+}
+
+/* right - line - none */
+.title-right::before{
+  display: none;
+
+}
+
+.left{
+  position: static;
+  width: 100%;
+  text-align: center;
+}
+
+.right{
+  position: relative;
+  width: 100%; /* menjano */
+  text-align: center;
+
+}
+
+.title-left, .title-right{
+  letter-spacing: 3px;
+  font-size: large;
+}
+
+/* node */
+#title-left-1::before{
+  display: none;
+}
+
+#title-right-1::after{
+  display: none;
+} 
+
+progress{
+  accent-color: #788f58;
+}
+
+}
+
+.ul-class li {
+  padding: 2%;
+}
